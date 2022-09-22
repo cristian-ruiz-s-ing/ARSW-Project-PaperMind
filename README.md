@@ -1,1 +1,0 @@
-# ARSW-Project-PaperMind
