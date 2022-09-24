@@ -1,8 +1,15 @@
-import './App.css';
-import Navbar from './Components/Navbar';
-import NavbarSelec from './Components/NavbarSelec';
-import Biblioteca from './Components/Biblioteca.js';
-import BibliotecaImp from './Components/BibliotecaImp.js';
+import React from 'react';
+import '../Styles/App.css';
+import Navbar from './Navbar';
+import NavbarSelec from './NavbarSelec';
+import Biblioteca from './Biblioteca.js';
+import BibliotecaImp from './BibliotecaImp.js';
+/*
+import { BrowserRouter, Route } from 'react-router-dom';
+import Notas from './Notas';
+<BrowserRouter>
+  <Route exact path='/Notas' element={Notas} />
+</BrowserRouter>*/
 
 function App() {
   return (

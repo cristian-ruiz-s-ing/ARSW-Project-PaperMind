@@ -1,0 +1,11 @@
+*{
+    font-family: sans-serif;
+}
+
+.container{
+    min-height: 100%;
+    align-items: center; 
+    justify-content: center;
+    max-width: 35%;
+
+}

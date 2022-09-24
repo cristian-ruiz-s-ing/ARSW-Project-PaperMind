@@ -1,6 +1,5 @@
 import React from 'react';
-import indexNotas from '../indexNotas.js';
-import Notas from "../Notas.js";
+import { Link } from 'react-router-dom';
 
 function Navbar(){
   return(
@@ -13,7 +12,7 @@ function Navbar(){
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" onClick={indexNotas}>Home <span class="sr-only">(current)</span></a>
+            <a /*Link to="/Notas"*/ class="nav-link" href='/Notas'>Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

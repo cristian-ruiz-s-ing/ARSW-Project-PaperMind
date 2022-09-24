@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Styles/indexNotas.css';
-import Notas from './Notas';
+import Notas from './Components/Notas';
 
 function IndexNotas(){
   ReactDOM.render(

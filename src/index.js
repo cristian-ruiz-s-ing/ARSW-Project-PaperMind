@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './Styles/index.css';
+import App from './Components/App';
+import Login from './indexLogin'
+import Notas from './Components/Notas';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
