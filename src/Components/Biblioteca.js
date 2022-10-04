@@ -25,7 +25,7 @@ function Biblioteca(props){
                 </div>
               </a>
               <div class="dropdown-menu dropdown-menu-right category-menu">
-                <a class="note-business badge-group-item badge-business dropdown-item position-relative category-business text-success" href="javascript:void(0);">
+                <a class="note-business badge-group-item badge-business dropdown-item position-relative category-business text-success" href="/Notas">
                   <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i>Abrir
                 </a>
                 <a class="note-social badge-group-item badge-social dropdown-item position-relative category-social text-info" href="javascript:void(0);">

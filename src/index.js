@@ -4,11 +4,25 @@ import './Styles/index.css';
 import App from './Components/App';
 import Login from './indexLogin'
 import Notas from './Components/Notas';
+import FormBiblioteca from './Components/FormBiblioteca.js';
+import FormNota from './Components/FormNota';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path='/' element={<App />}>
+        </Route>
+        <Route path='/Notas' element={<Notas />}>
+        </Route>
+        <Route path='/addNewBiblioteca' element={<FormBiblioteca />}>
+        </Route>
+        <Route path='/addNewNota' element={<FormNota />}>
+        </Route>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

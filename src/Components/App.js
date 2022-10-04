@@ -1,9 +1,13 @@
 import React from 'react';
 import '../Styles/App.css';
 import Navbar from './Navbar';
+import Notas from './Notas';
 import NavbarSelec from './NavbarSelec';
 import Biblioteca from './Biblioteca.js';
 import BibliotecaImp from './BibliotecaImp.js';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+
 /*
 import { BrowserRouter, Route } from 'react-router-dom';
 import Notas from './Notas';

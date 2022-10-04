@@ -39,7 +39,6 @@
 
 body{
   background: #edf1f5;
-  margin-top:20px;
 }
 .card {
   position: relative;
@@ -53,6 +52,7 @@ body{
   border-radius: 0;
 }
 .card {
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 .card-body {
