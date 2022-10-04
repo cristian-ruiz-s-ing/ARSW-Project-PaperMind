@@ -1,12 +1,10 @@
 import React from 'react';
-import Notas from './Notas.js';
 import { Link } from 'react-router-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
 
 function Navbar(){
   return(
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Paper Mind</a>
+      <Link class="navbar-brand" to="/">Paper Mind</Link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -14,14 +12,14 @@ function Navbar(){
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href='/'>Home<span class="sr-only">(current)</span></a>
+            <Link to="/" class="nav-link" >Home<span class="sr-only">(current)</span></Link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Biblioteca
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/addNewBiblioteca">Agregar biblioteca</a>
+              <Link to="/addNewBiblioteca" class="dropdown-item" >Agregar biblioteca</Link>
               <a class="dropdown-item" href="#">Editar biblioteca</a>
               <a class="dropdown-item" href="#">Ver bibliotecas compartidas</a>
               <div class="dropdown-divider"></div>

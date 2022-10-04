@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Styles/Biblioteca.css";
 
 function Biblioteca(props){
@@ -25,9 +26,9 @@ function Biblioteca(props){
                 </div>
               </a>
               <div class="dropdown-menu dropdown-menu-right category-menu">
-                <a class="note-business badge-group-item badge-business dropdown-item position-relative category-business text-success" href="/Notas">
+                <Link class="note-business badge-group-item badge-business dropdown-item position-relative category-business text-success" to="/Notas">
                   <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i>Abrir
-                </a>
+                </Link>
                 <a class="note-social badge-group-item badge-social dropdown-item position-relative category-social text-info" href="javascript:void(0);">
                   <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i> Editar
                 </a>
