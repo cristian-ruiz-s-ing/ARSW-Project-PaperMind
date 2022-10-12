@@ -27,26 +27,26 @@ function NavbarN(){
               </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Contribuidores
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Agregar contribuidor a Nota</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Eliminar contribuidor de Nota</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Contactos
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="https://www.youtube.com/c/freeCodeCampEspa%C3%B1ol">Ingeniero y desarrollador Cristian papito Ruiz</a>
-                  <a class="dropdown-item" href="#">Ingeniero y desarrollador Sebastian Medina</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Ingeniero y desarrollador Juan Molina</a>
-                </div>
-              </li>  
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contribuidores
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Agregar contribuidor a Nota</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Eliminar contribuidor de Nota</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contactos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://www.youtube.com/c/freeCodeCampEspa%C3%B1ol">Ingeniero y desarrollador Cristian papito Ruiz</a>
+                <a class="dropdown-item" href="#">Ingeniero y desarrollador Sebastian Medina</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Ingeniero y desarrollador Juan Molina</a>
+              </div>
+            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Ingrese Nota" aria-label="Search"/>

@@ -5,7 +5,7 @@ import "../Styles/Biblioteca.css";
 
 function Biblioteca(props){
   return(
-    <Draggable draggableId={props.index} index={props.index}>
+    <Draggable draggableId={props.Bibid} index={props.index}>
       {(draggableProvided)=> (
       <div {...draggableProvided.draggableProps} ref={draggableProvided.innerRef} {...draggableProvided.dragHandleProps} class="col-md-4 single-note-item all-category note-social">
         <div class="card card-body">

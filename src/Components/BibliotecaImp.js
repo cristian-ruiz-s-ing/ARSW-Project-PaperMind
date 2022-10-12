@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Biblioteca.css";
 
-function Biblioteca(props){
+function BibliotecaImp(props){
   return(
-    <Draggable draggableId={props.index} index={props.index}>
+    <Draggable draggableId={props.index} index={parseInt(props.index)}>
       {(draggableProvided)=> (
       <div {...draggableProvided.draggableProps} ref={draggableProvided.innerRef} {...draggableProvided.dragHandleProps} class="col-md-4 single-note-item all-category note-important">
         <div class="card card-body">
@@ -47,4 +47,4 @@ function Biblioteca(props){
     </Draggable>
   );
 }
-export default Biblioteca;
+export default BibliotecaImp;
