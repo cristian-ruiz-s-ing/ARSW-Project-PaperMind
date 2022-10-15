@@ -8,6 +8,7 @@ public class BibliotecasApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BibliotecasApplication.class, args);
+		
 	}
 
 }
