@@ -1,7 +1,6 @@
-package edu.eci.arsw.Bibliotecas.commons;
+package edu.eci.arsw.commons;
 
 import java.io.Serializable;
-
 import java.util.ArrayList;
 
 public interface GenericServiceAPI<T, ID extends Serializable> {

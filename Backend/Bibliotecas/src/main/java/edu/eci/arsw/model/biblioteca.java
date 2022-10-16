@@ -1,4 +1,4 @@
-package edu.eci.arsw.Bibliotecas.model;
+package edu.eci.arsw.model;
 
 import java.sql.Date;
 
@@ -9,11 +9,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity //Una entidad es un objeto, elemento o ‘cosa’ con atributos particulares que lo distinguen. Por ejemplo, este podría ser un ‘user
 public class biblioteca {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.AUTO)//El valor de esta PK es generada automáticamente con esta anotación
 	private Long id_biblioteca;
 	
 	@Column
