@@ -1,17 +1,18 @@
 package edu.eci.arsw.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import edu.eci.arsw.model.Biblioteca;
 import edu.eci.arsw.service.api.BibliotecaServiceAPI;
 
 @Controller
 public class bibliotecaController {
 	
+	@Autowired
 	private BibliotecaServiceAPI bibliotecaServiceAPI;
 	
 	@RequestMapping("/")
@@ -34,10 +35,12 @@ public class bibliotecaController {
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value = "/bibliotecas", method = RequestMethod.PUT)
-	public String putBiblioteca(Biblioteca biblioteca, Model model) {
-		bibliotecaServiceAPI.save(biblioteca);
-		return "redirect:/";
+	@RequestMapping(value = "/bibliotecas{id}", method = RequestMethod.PUT)
+	public String putBiblioteca(@PathVariable("id") Long id, Model model) {
+		if (id != null) {
+			model.addAttribute("biblioteca", bibliotecaServiceAPI.get(id));
+		}
+		return "bibliotecas";
 	}
 	
 	@RequestMapping(value = "/bibliotecas/{id}", method = RequestMethod.DELETE)

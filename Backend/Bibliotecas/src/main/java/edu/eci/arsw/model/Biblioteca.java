@@ -17,16 +17,16 @@ public class Biblioteca {
 	private Long id_biblioteca;
 	
 	@Column
-	private String nombreString;
+	private String nombre;
 	
 	@Column
-	private Date fecha_creacionDate;
+	private Date fecha_creacion;
 	
 	@Column
 	private Date fecha_modificacion;
 	
 	@Column
-	private String descripcionString;
+	private String descripcion;
 
 	public Long getId_biblioteca() {
 		return id_biblioteca;
@@ -36,20 +36,20 @@ public class Biblioteca {
 		this.id_biblioteca = id_biblioteca;
 	}
 
-	public String getNombreString() {
-		return nombreString;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setNombreString(String nombreString) {
-		this.nombreString = nombreString;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public Date getFecha_creacionDate() {
-		return fecha_creacionDate;
+	public Date getFecha_creacion() {
+		return fecha_creacion;
 	}
 
-	public void setFecha_creacionDate(Date fecha_creacionDate) {
-		this.fecha_creacionDate = fecha_creacionDate;
+	public void setFecha_creacion(Date fecha_creacion) {
+		this.fecha_creacion = fecha_creacion;
 	}
 
 	public Date getFecha_modificacion() {
@@ -60,12 +60,12 @@ public class Biblioteca {
 		this.fecha_modificacion = fecha_modificacion;
 	}
 
-	public String getDescripcionString() {
-		return descripcionString;
+	public String getDescripcion() {
+		return descripcion;
 	}
 
-	public void setDescripcionString(String descripcionString) {
-		this.descripcionString = descripcionString;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	
 	
