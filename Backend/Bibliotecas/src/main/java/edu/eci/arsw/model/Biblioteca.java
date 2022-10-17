@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity //Una entidad es un objeto, elemento o ‘cosa’ con atributos particulares que lo distinguen. Por ejemplo, este podría ser un ‘user
-public class biblioteca {
+public class Biblioteca {
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)//El valor de esta PK es generada automáticamente con esta anotación
