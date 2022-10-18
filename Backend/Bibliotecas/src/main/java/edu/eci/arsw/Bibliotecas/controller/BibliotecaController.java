@@ -3,6 +3,7 @@ package edu.eci.arsw.Bibliotecas.controller;
 import edu.eci.arsw.Bibliotecas.exception.ResourceNotFoundException;
 import edu.eci.arsw.Bibliotecas.model.Biblioteca;
 import edu.eci.arsw.Bibliotecas.repository.BibliotecaRepository;
+import edu.eci.arsw.Bibliotecas.services.BibliotecaServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,8 @@ public class BibliotecaController {
 
     @Autowired
     private BibliotecaRepository bibliotecaRepository;
+    @Autowired
+    private BibliotecaServices bibliotecaServices;
 
 	//Get Bibliotecas
     @GetMapping("/bibliotecas")
@@ -27,15 +30,15 @@ public class BibliotecaController {
     //Get Biblioteca by ID
     @GetMapping("/bibliotecas/{id}")
     public ResponseEntity<?> getBibliotecaById(@PathVariable(value = "id") Long idBibilioteca) throws ResourceNotFoundException { //@PathVariable indica que nos referimos a datos incluidos dentro del mismo path del pedido
-        Biblioteca biblioteca = bibliotecaRepository.findById(idBibilioteca).orElseThrow(() -> new ResourceNotFoundException(String.format("No se encontro la biblioteca con el ID: %d", idBibilioteca)));
-        return new ResponseEntity<>(biblioteca,HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(bibliotecaServices.getBibliotecaById(idBibilioteca),HttpStatus.ACCEPTED);
     }
 
     //Save Biblioteca
     @PostMapping("/bibliotecas")
     public ResponseEntity<?> createBiblioteca(@RequestBody Biblioteca biblioteca){
         try {
-            return new ResponseEntity<>(this.bibliotecaRepository.save(biblioteca), HttpStatus.CREATED);
+            bibliotecaServices.save(biblioteca);
+            return new ResponseEntity<>("Se creo una biblioteca.", HttpStatus.CREATED);
         } catch (Exception ex) {
             return new ResponseEntity<>("Error al crear nueva Biblioteca",HttpStatus.FORBIDDEN);
         }
