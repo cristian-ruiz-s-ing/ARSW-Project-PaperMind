@@ -24,7 +24,7 @@ public class BibliotecaController {
 	//Get Bibliotecas
     @GetMapping("/bibliotecas")
     public List<Biblioteca> getAllBibliotecas(){
-        return this.bibliotecaRepository.findAll();
+        return this.bibliotecaServices.getBibliotecas();
     }
 
     //Get Biblioteca by ID
@@ -37,8 +37,7 @@ public class BibliotecaController {
     @PostMapping("/bibliotecas")
     public ResponseEntity<?> createBiblioteca(@RequestBody Biblioteca biblioteca){
         try {
-            bibliotecaServices.save(biblioteca);
-            return new ResponseEntity<>("Se creo una biblioteca.", HttpStatus.CREATED);
+            return new ResponseEntity<>(this.bibliotecaServices.saveBiblioteca(biblioteca), HttpStatus.CREATED);
         } catch (Exception ex) {
             return new ResponseEntity<>("Error al crear nueva Biblioteca",HttpStatus.FORBIDDEN);
         }
@@ -47,20 +46,13 @@ public class BibliotecaController {
     //Update Bibblioteca
     @PutMapping("/bibliotecas/{id}")
     public ResponseEntity<?> updateBiblioteca(@PathVariable(value = "id") Long bibliotecaId, @RequestBody Biblioteca bibliotecaDatos) throws ResourceNotFoundException {
-        Biblioteca biblioteca = bibliotecaRepository.findById(bibliotecaId).orElseThrow(() -> new ResourceNotFoundException(String.format("No se encontro la biblioteca con el ID: %d", bibliotecaId)));
-
-        biblioteca.setNombre(bibliotecaDatos.getNombre());
-        biblioteca.setFecha_modificacion(LocalDateTime.now());
-        biblioteca.setDescripcion(bibliotecaDatos.getDescripcion());
-
-        return new ResponseEntity<>(this.bibliotecaRepository.save(biblioteca), HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(this.bibliotecaServices.updateBiblioteca(bibliotecaId, bibliotecaDatos), HttpStatus.ACCEPTED);
     }
 
     //Delete Biblioteca
     @DeleteMapping("/bibliotecas/{id}")
     public ResponseEntity<?> deleteBiblioteca(@PathVariable(value = "id") Long bibliotecaId) throws ResourceNotFoundException {
-        Biblioteca biblioteca = bibliotecaRepository.findById(bibliotecaId).orElseThrow(() -> new ResourceNotFoundException(String.format("No se encontro la biblioteca con el ID: %d", bibliotecaId)));
-        this.bibliotecaRepository.delete(biblioteca);
+        this.bibliotecaServices.deleteBiblioteca(bibliotecaId);
         return new ResponseEntity<>("Biblioteca Borrada", HttpStatus.OK);
     }
 }
