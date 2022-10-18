@@ -3,9 +3,10 @@ package edu.eci.arsw.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import edu.eci.arsw.model.Biblioteca;
 import edu.eci.arsw.service.api.BibliotecaServiceAPI;
 
@@ -21,29 +22,21 @@ public class bibliotecaController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/bibliotecas/{id}", method = RequestMethod.GET)
+	@GetMapping(value = "/bibliotecas/{id}")
 	public String getBibliotecaById(@PathVariable("id") Long id, Model model) {
-		if (id != null) {
+		if (id != null && id != 0) {
 			model.addAttribute("biblioteca", bibliotecaServiceAPI.get(id));
 		}
 		return "bibliotecas";
 	}
 	
-	@RequestMapping(value = "/bibliotecas", method = RequestMethod.POST)
+	@PostMapping(value = "/bibliotecas")
 	public String postBiblioteca(Biblioteca biblioteca, Model model) {
 		bibliotecaServiceAPI.save(biblioteca);
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value = "/bibliotecas{id}", method = RequestMethod.PUT)
-	public String putBiblioteca(@PathVariable("id") Long id, Model model) {
-		if (id != null) {
-			model.addAttribute("biblioteca", bibliotecaServiceAPI.get(id));
-		}
-		return "bibliotecas";
-	}
-	
-	@RequestMapping(value = "/bibliotecas/{id}", method = RequestMethod.DELETE)
+	@GetMapping(value = "/bibliotecas/{id}")
 	public String deleteBiblioteca(@PathVariable("id") Long id, Model model) {
 		bibliotecaServiceAPI.delete(id);
 		return "redirect:/";
