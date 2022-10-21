@@ -1,9 +1,10 @@
-package edu.eci.arsw.Bibliotecas.controller;
+package edu.eci.arsw.PaperMind.Biblioteca.controller;
 
-import edu.eci.arsw.Bibliotecas.exception.ResourceNotFoundException;
-import edu.eci.arsw.Bibliotecas.model.Biblioteca;
-import edu.eci.arsw.Bibliotecas.repository.BibliotecaRepository;
-import edu.eci.arsw.Bibliotecas.services.BibliotecaServices;
+
+import edu.eci.arsw.PaperMind.Biblioteca.exception.ResourceNotFoundException;
+import edu.eci.arsw.PaperMind.Biblioteca.model.Biblioteca;
+import edu.eci.arsw.PaperMind.Biblioteca.repository.BibliotecaRepository;
+import edu.eci.arsw.PaperMind.Biblioteca.services.BibliotecaServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

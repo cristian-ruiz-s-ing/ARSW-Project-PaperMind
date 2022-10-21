@@ -1,4 +1,4 @@
-package edu.eci.arsw.Bibliotecas.exception;
+package edu.eci.arsw.PaperMind.Biblioteca.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

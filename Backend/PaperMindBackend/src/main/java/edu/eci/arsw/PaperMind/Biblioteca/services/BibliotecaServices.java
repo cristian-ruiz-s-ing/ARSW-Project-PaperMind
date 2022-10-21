@@ -1,8 +1,9 @@
-package edu.eci.arsw.Bibliotecas.services;
+package edu.eci.arsw.PaperMind.Biblioteca.services;
 
-import edu.eci.arsw.Bibliotecas.exception.ResourceNotFoundException;
-import edu.eci.arsw.Bibliotecas.model.Biblioteca;
-import edu.eci.arsw.Bibliotecas.repository.BibliotecaRepository;
+
+import edu.eci.arsw.PaperMind.Biblioteca.exception.ResourceNotFoundException;
+import edu.eci.arsw.PaperMind.Biblioteca.model.Biblioteca;
+import edu.eci.arsw.PaperMind.Biblioteca.repository.BibliotecaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
